@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || '1_8_c8d6_0f91_c979').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -28,7 +28,7 @@ module.exports = {
           logging: false,
         }),
   HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
-  SUDO: process.env.SUDO || '',
+  SUDO: process.env.SUDO || '917994591304',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
@@ -46,7 +46,7 @@ module.exports = {
   ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected &mention kicked_',
   ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_AntiWord Detected &mention kicked_',
   ANTIWORDS: process.env.ANTIWORDS || 'word',
-  MENTION: process.env.MENTION || '',
+  MENTION: process.env.MENTION || '{"linkPreview": {"head": " ֺ✦⸼࣪⸳ ⌯࣪ ꪜꪖꪀ∂ιρяꪖꪀтнꪖꪀ ⌯࣪ ᥊∂ ⌯࣪ ˃̵͈᷄༝ฅ ៸៸","body": "📑   ᤹   ﾞ𝟔𝟔𝟔   𑱃𑱃 ㇐🗝️","showAdAttribution": true,"renderLargerThumbnail": true,"mediaType": 1,"thumbnail": "https://telegra.ph/file/ed43b601b59f53d963e90.jpg",         "sourceUrl": "https://www.instagram.com/dare___devil___074?igsh=MTYwczVrOWV0Y3Zlbw=="},"waveform": [ 90,0,90,0,90 ] }',
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
   REJECT_CALL: toBool(process.env.REJECT_CALL),
   VPS: toBool(process.env.VPS),
